@@ -997,3 +997,78 @@ code {
 .blog-index {
   position: static;
 }
+
+
+/* lesson 8 */
+
+.message-form {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.message-form input,
+.message-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background: rgba(0, 0, 0, 0.35);
+  color: var(--text);
+  font: inherit;
+}
+
+.message-form textarea {
+  min-height: 8rem;
+  resize: vertical;
+}
+
+.message-form button,
+#messages button {
+  width: fit-content;
+  padding: 0.65rem 1rem;
+  border: 1px solid var(--border-bright);
+  border-radius: 0.5rem;
+  background: var(--panel-soft);
+  color: var(--gold);
+  cursor: pointer;
+}
+
+#messages ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+#messages li {
+  display: grid;
+  gap: 0.5rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+#messages span {
+  display: block;
+}
+
+#messages a {
+  color: var(--border-bright);
+  font-weight: 700;
+  text-decoration-color: var(--border-bright);
+}
+
+#messages a:hover {
+  color: var(--gold);
+}
+
+@media (max-width: 700px) {
+  .message-form input,
+  .message-form textarea,
+  .message-form button,
+  #messages button {
+    font-size: 1rem;
+  }
+
+  .message-form button,
+  #messages button {
+    width: 100%;
+  }
+}

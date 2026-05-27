@@ -21,10 +21,12 @@
       <ul class="nav-links">
         <li><a href="#About">About</a></li>
         <li><a href="#Experience">Experience</a></li>
-        <li><a href="#Skills">Skills</a></li>
+        <li><a href="#skills">Skills</a></li>
         <li><a href="#Projects">Projects</a></li>
         <li><a href="blog.html">Lyrics &amp; Notes</a></li>
         <li><a href="#Connect">Connect</a></li>
+        <!-- add new navigation link -->
+        <li><a href="#LeaveMessage">Leave a Message</a></li>
       </ul>
     </nav>
   </header>
@@ -145,15 +147,9 @@
           <p class="glyph-row" aria-hidden="true">☾ · ✿ · ⚰</p>
         </section>
 
-        <section id="Skills" class="card section-card">
+        <section id="skills" class="card section-card">
           <h2>Skills</h2>
           <ul class="skill-list">
-            <li>HTML structure</li>
-            <li>CSS layout and atmosphere</li>
-            <li>JavaScript fundamentals</li>
-            <li>Git and GitHub workflow</li>
-            <li>Song and lyric</li>
-            <li>Visual world-building</li>
           </ul>
         </section>
 
@@ -213,6 +209,31 @@
           </form>
         </section>
 
+        <!-- leave a message section -->
+        <section id="LeaveMessage" class="card section-card">
+          <h2>Leave a Message</h2>
+
+          <form name="leave_message" class="message-form">
+            <label for="usersName">Name:</label>
+            <input id="usersName" type="text" name="usersName" required>
+
+            <label for="usersEmail">Email:</label>
+            <input id="usersEmail" type="email" name="usersEmail" required>
+
+            <label for="usersMessage">Message:</label>
+            <textarea id="usersMessage" name="usersMessage" required></textarea>
+
+            <button type="submit">Submit</button>
+          </form>
+        </section>
+
+<!-- Add messages section -->
+        <section id="messages" class="card section-card">
+          <h2>Messages</h2>
+          <ul></ul>
+        </section>
+
+<!-- relics section -->
         <section id="Relics" class="card section-card relics-card">
           <h2>Relics</h2>
           <p>
@@ -222,7 +243,7 @@
 
           <div class="relic-table" aria-label="Portfolio relic information">
             <span><bdo dir="rtl">Joseph Peck</bdo></span>
-            <time datetime="2026-05-09">May 9, 2026</time>
+            <time class="live-date">May 9, 2026</time>
           </div>
 
           <address>Joseph Peck · portfolio and archive</address>
@@ -230,5 +251,6 @@
       </div>
     </div>
   </main>
+  <script src="js/index.js"></script>
 </body>
 </html>
