@@ -94,3 +94,40 @@ if (messageForm) {
     messageForm.reset();
   });
 }
+
+// lesson 9 fetch api assignment
+
+fetch("https://api.github.com/users/Joeypeck1987/repos")
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error("GitHub repositories could not be loaded.");
+    }
+
+    return response.json();
+  })
+  .then((repositories) => {
+    console.log(repositories);
+
+    const projectSection = document.getElementById("Projects");
+    const projectList = projectSection.querySelector(".project-list");
+
+    for (let i = 0; i < repositories.length; i++) {
+      const project = document.createElement("li");
+
+      project.innerText = repositories[i].name;
+
+      projectList.appendChild(project);
+    }
+  })
+  .catch((error) => {
+    const projectSection = document.getElementById("Projects");
+    const projectList = projectSection.querySelector(".project-list");
+
+    const errorMessage = document.createElement("li");
+
+    errorMessage.innerText = "Repositories could not be loaded. Please try again later.";
+
+    projectList.appendChild(errorMessage);
+
+    console.error("An error occurred:", error);
+  });

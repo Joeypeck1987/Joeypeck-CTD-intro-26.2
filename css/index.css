@@ -579,16 +579,6 @@ samp {
 }
 
 /*
-  Prepare the Projects list for JavaScript/GitHub API content to be added later.
-  The list is empty in the HTML for the assignment.
-*/
-.project-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-/*
   Turns the Connect links into a flexible row of styled buttons.
 */
 .connect-list {
@@ -1070,5 +1060,34 @@ code {
   .message-form button,
   #messages button {
     width: 100%;
+  }
+}
+
+/* lesson 9 styling*/
+
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin-top: 1rem;
+  padding: 0;
+  list-style: none;
+}
+
+.project-list li {
+  border: 1px solid rgba(109, 87, 53, 0.58);
+  border-radius: 0.9rem;
+  padding: 1rem;
+  color: var(--text);
+  background: linear-gradient(145deg, rgba(36, 32, 24, 0.72), rgba(15, 15, 15, 0.74));
+}
+
+#Projects > h3 {
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 700px) {
+  .project-list {
+    grid-template-columns: 1fr;
   }
 }
