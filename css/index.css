@@ -1086,6 +1086,18 @@ code {
   margin-top: 1.5rem;
 }
 
+.project-list a {
+  color: var(--gold);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.project-list a:hover,
+.project-list a:focus-visible {
+  color: var(--link-hover);
+  text-decoration: underline;
+}
+
 @media (max-width: 700px) {
   .project-list {
     grid-template-columns: 1fr;
