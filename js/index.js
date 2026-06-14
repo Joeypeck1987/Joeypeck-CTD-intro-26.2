@@ -114,9 +114,16 @@ fetch("https://api.github.com/users/Joeypeck1987/repos")
     for (let i = 0; i < repositories.length; i++) {
       const project = document.createElement("li");
 
-      project.innerText = repositories[i].name;
+      const projectLink = document.createElement("a");
 
-      projectList.appendChild(project);
+        projectLink.innerText = repositories[i].name;
+        projectLink.href = repositories[i].html_url;
+        projectLink.target = "_blank";
+        projectLink.rel = "noopener noreferrer";
+
+        project.appendChild(projectLink);
+
+        projectList.appendChild(project);
     }
   })
   .catch((error) => {
