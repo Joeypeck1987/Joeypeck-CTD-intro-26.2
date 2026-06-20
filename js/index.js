@@ -15,12 +15,16 @@ copyright.innerHTML = `Joseph Peck © ${thisYear}`;
 footer.appendChild(copyright);
 
 const skills = [
-  "HTML structure",
-  "CSS layout and atmosphere",
-  "JavaScript fundamentals",
-  "Git and GitHub workflow",
-  "Song and lyric",
-  "Visual world-building"
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "DOM Manipulation",
+  "Fetch API",
+  "API Integration",
+  "Git",
+  "GitHub",
+  "Responsive Web Design",
+  "Debugging"
 ];
 
 const skillsSection = document.querySelector("#skills");
