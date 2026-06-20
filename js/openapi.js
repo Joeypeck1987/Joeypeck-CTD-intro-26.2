@@ -14,7 +14,7 @@ const ancientButton = document.getElementById("ancientButton");
 // Selecting the results area where the API data will be displayed.
 const results = document.getElementById("results");
 
-// This function clears the results area and shows a loading message.
+// This function clears the results area and s  ws a loading message.
 function showLoadingMessage(message) {
   results.innerHTML = `<p>${message}</p>`;
 }
